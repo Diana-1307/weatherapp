@@ -45,7 +45,7 @@ input[type="text"] {
   background-color: rgb(181, 180, 186, 0.2);
   border: 1.4px solid #d29b96;
   border-radius: 40px;
-  width: 330px;
+  width: 430px;
   text-align: center;
 }
 
@@ -54,22 +54,7 @@ input[type="image"] {
   height: 35px;
   border-radius: 50%;
   padding: 1px;
-  margin-right: 142px;
-  font-size: 30px;
-  padding-right: 0px;
-  border: none;
-  background-color: #d29b96;
-  text-align: bottom;
-  transition: all 120ms ease-in;
-}
-
-input[title="Search location"] {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  padding: 1px;
-  padding-left: 0px;
-  margin-right: 0px;
+  margin-right: 70px;
   font-size: 30px;
   border: none;
   background-color: #d29b96;
@@ -107,7 +92,7 @@ p {
   text-decoration: underline;
 }
 
-.weatherApp {
+.weather-app {
   max-width: 650px;
   height: auto;
   display: block;
@@ -154,7 +139,7 @@ p {
 }
 
 .current-weather {
-  background-color: rgba(45, 44, 44, 0.35);
+  background-color: rgba(45, 44, 44, 0.45);
   border: 2px solid rgb(210, 155, 150, 0.8);
   width: 260px;
   height: 260px;
@@ -233,7 +218,7 @@ p {
 }
 
 .week-weather {
-  background-color: rgba(45, 44, 44, 0.35);
+  background-color: rgba(45, 44, 44, 0.45);
   text-align: center;
   color: rgb(210, 155, 150, 0.6);
   border-radius: 17px;
