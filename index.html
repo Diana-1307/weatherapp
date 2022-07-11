@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="src/styles.css" rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card weatherApp">
+        <div class="card-body info-body">
+          <div class="row cities">
+            <div class="col-2 london-city">London</div>
+            <div class="col-2 barcelona-city">Barcelona</div>
+            <div class="col-2 paris-city">Paris</div>
+            <div class="col-2 berlin-city">Berlin</div>
+            <div class="col-2 bordo-city">Bordo</div>
+            <div class="col-2 kyiv-city">Kyiv</div>
+          </div>
+          <div class="search">
+            <form class="d-flex justify-content-around" id="search-form">
+              <input
+                type="text"
+                placeholder="Change a city"
+                autocomplete="off"
+                autofocus="on"
+                id="search-text-input"
+              />
+              <input
+                type="image"
+                src="photos/png-clipart-magnifying-glass-computer-icons-magnifying-glass-glass-magnifier-thumbnail-removebg-preview.png"
+                alt="Search location"
+                title="Search location"
+                type="submit"
+              />
+              <input
+                id="current-location"
+                type="image"
+                src="photos/location.png"
+                ;
+                alt="Current location"
+                title="Current location"
+              />
+            </form>
+          </div>
+          <div class="row search-results">
+            <div class="col-6">
+              <div class="current-weather">
+                <div class="row">
+                  <div class="col-7 day-temperature">
+                    <span class="temperatureNumber">23</span>
+                  </div>
+                  <div class="col-5 type-temperature">
+                    <a class="celsius-link" href="#">°C |</a>
+
+                    <a class="fahrenheit-link" href="#">°F</a>
+                  </div>
+                </div>
+                <p id="description">Sunny</p>
+                <img
+                  src="photos/sun.png"
+                  class="day-image"
+                  alt="Weather image"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div id="currentCity" class="currentCity">KHARKIV, UKRAINE</div>
+              <h3 id="currentDateNow" class="currentDateNow">
+                Friday, 27 May, 11:35
+              </h3>
+              <div class="current-weather-details">
+                <div class="row">
+                  <div class="col-2">
+                    <i
+                      class="fa-solid fa-temperature-half current-weather-image"
+                      alt="Humidity"
+                    ></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Humidity: <span id="humidity">28</span>%</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <i
+                      class="fa-solid fa-wind current-weather-image"
+                      alt="Wind"
+                    ></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Wind: <span id="wind">5</span> m/s</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <i
+                      class="fa-solid fa-droplet current-weather-image"
+                      alt="Visibility"
+                    ></i>
+                  </div>
+                  <div class="col-10">
+                    <p>Visibility: <span id="humidity">80</span>%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row week-weather">
+            <div class="col-2">
+              <div>SAT</div>
+              <img
+                src="photos/rainy.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>14℃</div>
+            </div>
+            <div class="col-2">
+              <div>SUN</div>
+              <img
+                src="photos/sun.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>23℃</div>
+            </div>
+            <div class="col-2">
+              <div>MON</div>
+              <img
+                src="photos/windy.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>19℃</div>
+            </div>
+            <div class="col-2">
+              <div>TUE</div>
+              <img
+                src="photos/rainy.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>16℃</div>
+            </div>
+            <div class="col-2">
+              <div>WED</div>
+              <img
+                src="photos/sun.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>15℃</div>
+            </div>
+            <div class="col-2">
+              <div>THU</div>
+              <img
+                src="photos/windy.png"
+                class="week-image"
+                alt="Weather image"
+              />
+              <div>15℃</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="made-by">
+        <p>
+          Made by
+          <a
+            href="https://www.shecodes.io/students/738-diana-bilousova"
+            target="_blank"
+            id="made-by-name"
+            >Diana Bilousova</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
