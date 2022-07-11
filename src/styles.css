@@ -233,6 +233,7 @@ p {
 }
 .background-weather {
   background-color: rgb(27, 24, 24, 0.2);
+  opacity: 0.2;
 }
 
 .week-weather {
