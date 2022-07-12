@@ -63,6 +63,20 @@ input[type="image"] {
   transition: all 120ms ease-in;
 }
 
+input[title="Search location"] {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 1px;
+  padding-left: 0px;
+  margin-right: 0px;
+  font-size: 30px;
+  border: none;
+  background-color: #d29b96;
+  text-align: bottom;
+  transition: all 120ms ease-in;
+}
+
 input:hover {
   background-color: rgb(220, 194, 183, 0.2);
   border: 1px solid rgb(56, 47, 47);
@@ -233,19 +247,8 @@ p {
   width: 70px;
 }
 
-.made-by {
+.made-by,
+.github-link {
   text-align: center;
-}
-.current-button {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  padding: 1px;
-  padding-left: 0px;
-  margin-right: 0px;
-  font-size: 30px;
-  border: none;
-  background-color: #d29b96;
-  text-align: bottom;
-  transition: all 120ms ease-in;
+  color: #13405a;
 }
