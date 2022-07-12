@@ -97,12 +97,14 @@ p {
   text-decoration: underline;
 }
 
-#made-by-name {
+#made-by-name,
+#github-link {
   text-decoration: none;
   color: #000;
 }
 
-#made-by-name:hover {
+#made-by-name:hover,
+#github-link:hover {
   color: #13405a;
   text-decoration: underline;
 }
