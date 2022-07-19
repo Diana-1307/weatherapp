@@ -121,7 +121,7 @@ searchCity("Kyiv");
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperatureNumber");
+  let temperatureElement = document.querySelector("#day-temperature");
 
   let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
