@@ -10,12 +10,8 @@ body {
   text-decoration: underline;
   color: antiquewhite;
 }
-.celsius-link {
-  color: #d29b96;
-  font-size: 19px;
-  text-decoration: none;
-}
-.fahrenheit-link {
+
+.units {
   color: #d29b96;
   font-size: 19px;
   text-decoration: none;
