@@ -122,10 +122,9 @@ searchCity("Kyiv");
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperatureNumber");
-  celsiusLink.classList.remove("celsiusTemperature");
-  fahrenheitLink.classList.add("celsiusTemperature");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector(".fahrenheit-link");
