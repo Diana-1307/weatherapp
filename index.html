@@ -26,12 +26,26 @@
       <div class="card weatherApp">
         <div class="card-body info-body">
           <div class="row cities">
-            <div class="col-2 london-city">London</div>
-            <div class="col-2 barcelona-city">Barcelona</div>
-            <div class="col-2 paris-city">Paris</div>
-            <div class="col-2 berlin-city">Berlin</div>
-            <div class="col-2 bordo-city">Bordo</div>
-            <div class="col-2 kyiv-city">Kyiv</div>
+            <div class="col-2">
+              <a href="#" class="london-city" id="london-city">London</a>
+            </div>
+            <div class="col-2">
+              <a href="#" class="barcelona-city" id="barcelona-city"
+                >Barcelona</a
+              >
+            </div>
+            <div class="col-2">
+              <a href="#" class="paris-city" id="paris-city">Paris</a>
+            </div>
+            <div class="col-2">
+              <a href="#" class="berlin-city" id="berlin-city">Berlin</a>
+            </div>
+            <div class="col-2">
+              <a href="#" class="ontario-city" id="ontario-city">Ontario</a>
+            </div>
+            <div class="col-2">
+              <a href="#" class="kyiv-city" id="kyiv-city">Kyiv</a>
+            </div>
           </div>
           <div class="search">
             <form class="d-flex justify-content-around" id="search-form">
@@ -64,13 +78,12 @@
             <div class="col-6">
               <div class="current-weather">
                 <div class="row">
-                  <div class="col-7 day-temperature">
-                    <span class="temperature-number">23</span>
+                  <div id="temperature" class="col-7 day-temperature">
+                    <span class="temperatureNumber">23</span>
                   </div>
-                  <div class="col-5 type-temperature">
-                    <a class="active" id="celsius-link" href="#">°C |</a>
-
-                    <a id="fahrenheit-link" href="#">°F</a>
+                  <div id="temperature" class="col-5 type-temperature">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
                   </div>
                 </div>
                 <p id="description">Sunny</p>
@@ -114,11 +127,11 @@
                   <div class="col-2">
                     <i
                       class="fa-solid fa-droplet current-weather-image"
-                      alt="Precipitation"
+                      alt="Feels-like"
                     ></i>
                   </div>
                   <div class="col-10">
-                    <p>Precipitation: <span id="humidity">80</span>%</p>
+                    <p>Feels like: <span id="feelsLike">5</span></p>
                   </div>
                 </div>
               </div>

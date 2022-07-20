@@ -80,11 +80,16 @@ function showWeather(response) {
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
+  let feelsLike = Math.round(response.data.main.feels_like);
+  let feelsElment = document.querySelector("#feelsLike");
+  feelsElment.innerHTML = `${feelsLike} &degC`;
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -121,7 +126,7 @@ searchCity("Kyiv");
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-number");
+  let temperatureElement = document.querySelector("#temperature");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -133,14 +138,88 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature-number");
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
-let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+///////
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let searchInput = document.querySelector(".search-input");
+  let currentCity = document.querySelector("#current-city");
+
+  let input = searchInput.value.trim();
+  if (input) {
+    currentCity.innerHTML = ` `;
+  } else {
+    currentCity.innerHTML = null;
+    alert("Enter a location, please");
+  }
+
+  let city = searchInput.value;
+
+  searchCity(city);
+}
+/////
+
+function displayLondonWeather(event) {
+  event.preventDefault();
+  let city = "London";
+  searchCity(city);
+}
+
+let searchLondon = document.querySelector("#london-city");
+searchLondon.addEventListener("click", displayLondonWeather);
+
+function displayBarcelonaWeather(event) {
+  event.preventDefault();
+  let city = "Barcelona";
+  searchCity(city);
+}
+
+let searchBarcelona = document.querySelector("#barcelona-city");
+searchBarcelona.addEventListener("click", displayBarcelonaWeather);
+
+function displayParisWeather(event) {
+  event.preventDefault();
+  let city = "Paris";
+  searchCity(city);
+}
+
+let searchParis = document.querySelector("#paris-city");
+searchParis.addEventListener("click", displayParisWeather);
+
+function displayBerlinWeather(event) {
+  event.preventDefault();
+  let city = "Berlin";
+  searchCity(city);
+}
+
+let searchBerlin = document.querySelector("#berlin-city");
+searchBerlin.addEventListener("click", displayBerlinWeather);
+
+function displayOntarioWeather(event) {
+  event.preventDefault();
+  let city = "Ontario";
+  searchCity(city);
+}
+
+let searchOntario = document.querySelector("#ontario-city");
+searchOntario.addEventListener("click", displayOntarioWeather);
+
+function displayKyivWeather(event) {
+  event.preventDefault();
+  let city = "Kyiv";
+  searchCity(city);
+}
+
+let searchKyiv = document.querySelector("#kyiv-city");
+searchKyiv.addEventListener("click", displayKyivWeather);

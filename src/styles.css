@@ -10,31 +10,22 @@ body {
   text-decoration: underline;
   color: antiquewhite;
 }
-.celsius-link {
-  color: #d29b96;
-  font-size: 19px;
-  text-decoration: none;
-}
-.fahrenheit-link {
-  color: #d29b96;
-  font-size: 19px;
-  text-decoration: none;
-}
 
 .london-city,
 .barcelona-city,
 .paris-city,
 .berlin-city,
-.bordo-city,
+.ontario-city,
 .kyiv-city {
   text-decoration: none;
   cursor: pointer;
+  color: #5e504d;
 }
 .london-city:hover,
 .barcelona-city:hover,
 .paris-city:hover,
 .berlin-city:hover,
-.bordo-city:hover,
+.ontario-city:hover,
 .kyiv-city:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -177,14 +168,25 @@ p {
 }
 
 .type-temperature {
-  font-size: 2px;
+  color: #d29b96;
+  font-size: 19px;
+  text-decoration: none;
   text-align: left;
   padding-top: 30px;
   padding-left: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-
+#celsius-link,
+#fahrenheit-link {
+  color: #d29b96;
+  font-size: 19px;
+  text-decoration: none;
+}
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  text-decoration: underline;
+}
 .day-image {
   width: 120px;
   margin-top: -20px;
