@@ -48,7 +48,7 @@ currentday.innerHTML = formatDate();
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   return days[day];
 }
@@ -68,7 +68,7 @@ function displayForecast(response) {
         `
 
     <div class="col-2">
-      <div class="weayher-forecast-date">${forecastDay.dt}</div>
+      <div class="weayher-forecast-date">${formatDay(forecastDay.dt)}</div>
     
       <img
         src="http://openweathermap.org/img/wn/${
