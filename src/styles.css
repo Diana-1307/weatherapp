@@ -201,8 +201,8 @@ p {
   background-color: rgba(198, 197, 200, 0.154);
   height: 0 auto;
   margin: 12px;
-  border: 1.7px solid rgb(126, 206, 212);
   outline: 1.5px solid rgb(71, 53, 53, 0.6);
+  border: 1.7px solid rgb(126, 206, 212);
   padding: 10px;
   border-radius: 10px;
   line-height: 2;
