@@ -90,6 +90,8 @@ p {
 .weatherApp {
   max-width: 650px;
   height: auto;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   display: block;
   margin: 125px auto 50px;
   background-color: rgba(137, 147, 155, 0.453);
