@@ -87,12 +87,11 @@ p {
   text-decoration: underline;
 }
 
-
 .weatherApp {
   max-width: 650px;
   height: auto;
   display: block;
-  margin: 145px auto 50px;
+  margin: 125px auto 50px;
   background-color: rgba(137, 147, 155, 0.453);
   border: 2px solid rgba(134, 224, 230, 0.72);
   border-radius: 10px;
