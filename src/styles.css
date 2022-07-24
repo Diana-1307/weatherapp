@@ -87,17 +87,6 @@ p {
   text-decoration: underline;
 }
 
-#made-by-name,
-#github-link {
-  text-decoration: none;
-  color: #000;
-}
-
-#made-by-name:hover,
-#github-link:hover {
-  color: #13405a;
-  text-decoration: underline;
-}
 
 .weatherApp {
   max-width: 650px;
@@ -244,8 +233,19 @@ p {
   width: 70px;
 }
 
-.made-by,
-.github-link {
+.made-by {
   text-align: center;
-  color: #13405a;
+  color: #143a4f;
+}
+
+#made-by-name,
+#github-link {
+  text-decoration: none;
+  color: #143a4f;
+}
+
+#made-by-name:hover,
+#github-link:hover {
+  color: #2c84b7;
+  text-decoration: underline;
 }
