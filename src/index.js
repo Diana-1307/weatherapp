@@ -112,6 +112,18 @@ function search(event) {
 
   let currentCity = document.querySelector("#currentCity");
   currentCity.innerHTML = `${searchInput.value}`;
+
+  let input = searchInput.value.trim();
+  if (input) {
+    currentCity.innerHTML = ` `;
+  } else {
+    currentCity.innerHTML = null;
+    alert("Enter a location, please");
+  }
+
+  let city = searchInput.value;
+
+  searchCity(city);
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -122,6 +134,8 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submitFormSearch);
 
 //////////////////
+
+/////
 function showWeather(response) {
   console.log();
 
@@ -212,26 +226,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 ///////
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  let searchInput = document.querySelector(".search-input");
-  let currentCity = document.querySelector("#current-city");
-
-  let input = searchInput.value.trim();
-  if (input) {
-    currentCity.innerHTML = ` `;
-  } else {
-    currentCity.innerHTML = null;
-    alert("Enter a location, please");
-  }
-
-  let city = searchInput.value;
-
-  searchCity(city);
-}
-/////
 
 function displayLondonWeather(event) {
   event.preventDefault();
