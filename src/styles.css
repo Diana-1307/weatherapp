@@ -206,6 +206,7 @@ p {
   outline: 1.5px solid rgb(71, 53, 53, 0.6);
   border: 1.7px solid rgb(126, 206, 212);
   padding: 10px;
+  position: relative;
   border-radius: 10px;
   line-height: 2;
 }
